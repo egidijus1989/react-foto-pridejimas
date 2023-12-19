@@ -16,7 +16,9 @@ const Posts = () => {
   };
   return (
     <div className="container">
-      <button onClick={handleClick2}>Prideti nuotrauka</button>
+      <button onClick={handleClick2} className="btn btn-danger">
+        Prideti nuotrauka
+      </button>
       <div className="row">
         {post.map((post) => (
           <Post key={post.id} title={post.title} description={post.URL} />
