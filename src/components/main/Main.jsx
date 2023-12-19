@@ -15,7 +15,7 @@ const Main = () => {
   return (
     <div className="container">
       <Search onSearch={handleInputChange} val={searchTerm} />
-      <Posts items={filteredPosts} />
+      <Posts items={filteredPosts} searchTerm={searchTerm}/>
     </div>
   );
 };

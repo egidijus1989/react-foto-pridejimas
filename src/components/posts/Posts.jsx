@@ -2,7 +2,7 @@ import AddPhoto from "../addPhoto/AddPhoto";
 import Post from "../post/Post";
 import { useState } from "react";
 
-const Posts = () => {
+const Posts = (props) => {
   const [post, setPosts] = useState([]);
   const handleFormDate = (data) => {
     setPosts((prevData) => {
@@ -20,8 +20,8 @@ const Posts = () => {
         Prideti nuotrauka
       </button>
       <div className="row">
-        {post.map((post) => (
-          <Post key={post.id} title={post.title} description={post.URL} />
+        {post.filter(item => item.title.includes(props.searchTerm)).map((post) => (
+          <Post key={post.id} title={post.title} URL={post.URL} />
         ))}
       </div>
       {clicked2 ? (
