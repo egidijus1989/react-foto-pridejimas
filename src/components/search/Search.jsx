@@ -4,7 +4,7 @@ const Search = ({ val, onSearch, ...props }) => {
       className="form-control m-1"
       value={val}
       onChange={onSearch}
-      placeholder="Posto pavadinimas"
+      placeholder="Photo pavadinimas"
     ></input>
   );
 };

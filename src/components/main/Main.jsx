@@ -12,12 +12,10 @@ const Main = () => {
   const filteredPosts = PostData.filter((post) => {
     return post.title.includes(searchTerm);
   });
-  console.log(searchTerm);
   return (
     <div className="container">
       <Search onSearch={handleInputChange} val={searchTerm} />
       <Posts items={filteredPosts} />
-      <AddPhoto />
     </div>
   );
 };
